@@ -1,0 +1,1 @@
+docker stack deploy -c<(curl -sSL https://raw.githubusercontent.com/leo18945/docker-stack-nginx/master/docker-compose.yml) nginx

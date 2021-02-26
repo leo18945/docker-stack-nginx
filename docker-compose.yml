@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  nginx:
+    image: nginx:1.18-alpine
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      # - ./conf.d:/etc/nginx/conf.d
+      - ./log:/var/log/nginx
+      # - ./html:/usr/share/nginx/html
+    environment:
+      - TZ=Asia/Shanghai
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80
